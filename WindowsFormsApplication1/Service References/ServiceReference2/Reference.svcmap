@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c3e9e0fd-560a-4ed9-8717-85737c2bc310" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54392/BLOOD_PRESSURE.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BLOOD_PRESSURE.disco" MetadataType="Disco" ID="56c1da97-0478-46e3-b48a-14df0d9d1551" SourceId="1" SourceUrl="http://localhost:54392/BLOOD_PRESSURE.svc?disco" />
+    <MetadataFile FileName="BLOOD_PRESSURE.xsd" MetadataType="Schema" ID="ac4bdff3-9faf-47f2-818f-744677b4d670" SourceId="1" SourceUrl="http://localhost:54392/BLOOD_PRESSURE.svc?xsd=xsd1" />
+    <MetadataFile FileName="BLOOD_PRESSURE.wsdl" MetadataType="Wsdl" ID="16c4fcd8-142d-4c00-be19-08e875f7e3be" SourceId="1" SourceUrl="http://localhost:54392/BLOOD_PRESSURE.svc?wsdl" />
+    <MetadataFile FileName="BLOOD_PRESSURE1.xsd" MetadataType="Schema" ID="606c0ae1-1802-4cf7-9421-72e0eafb9b60" SourceId="1" SourceUrl="http://localhost:54392/BLOOD_PRESSURE.svc?xsd=xsd0" />
+    <MetadataFile FileName="BLOOD_PRESSURE2.xsd" MetadataType="Schema" ID="82e44cee-29c2-46a5-8802-c0ecaf5c02e6" SourceId="1" SourceUrl="http://localhost:54392/BLOOD_PRESSURE.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="USER" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54392/USER.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54392/USER.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54392/USER.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUSER_signUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:signUp" />
+  </wsdl:message>
+  <wsdl:message name="IUSER_signIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:signIn" />
+  </wsdl:message>
+  <wsdl:message name="IUSER_signIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:signInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSER_findUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:findUser" />
+  </wsdl:message>
+  <wsdl:message name="IUSER_findUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:findUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUSER_updateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateUser" />
+  </wsdl:message>
+  <wsdl:portType name="IUSER">
+    <wsdl:operation name="signUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUSER/signUp" message="tns:IUSER_signUp_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="signIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUSER/signIn" message="tns:IUSER_signIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUSER/signInResponse" message="tns:IUSER_signIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="findUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUSER/findUser" message="tns:IUSER_findUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUSER/findUserResponse" message="tns:IUSER_findUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUSER/updateUser" message="tns:IUSER_updateUser_InputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUSER" type="tns:IUSER">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="signUp">
+      <soap:operation soapAction="http://tempuri.org/IUSER/signUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="signIn">
+      <soap:operation soapAction="http://tempuri.org/IUSER/signIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findUser">
+      <soap:operation soapAction="http://tempuri.org/IUSER/findUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="http://tempuri.org/IUSER/updateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="USER">
+    <wsdl:port name="BasicHttpBinding_IUSER" binding="tns:BasicHttpBinding_IUSER">
+      <soap:address location="http://localhost:54392/USER.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
